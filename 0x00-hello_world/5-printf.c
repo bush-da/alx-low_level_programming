@@ -7,8 +7,11 @@
 
 int main(void)
 {
-	printf("with proper grammar,");
-	printf(" but the outcome is a");
-	printf(" piece of art,\n");
+	printf("with proper ");
+	printf("grammar,");
+	printf(" but the "); 
+	printf("outcome is a");
+	printf(" piece of ");
+	printf("art,\n");
 	return (0);
 }
