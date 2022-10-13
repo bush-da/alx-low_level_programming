@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* main() : entiry point for this program
+/*
+ * main - entiry point for this program
  * puts - prints some text
  * returns 0 if no error
  */
