@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * main - entiry point
+ * main() - entiry point
  * puts - prints some text
  * returns 0 if no error
  */
