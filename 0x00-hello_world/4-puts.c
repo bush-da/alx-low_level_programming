@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entiry point for this program
+ * main - prints the phrase "Programming..."
  * puts - prints some text
  * returns 0 if no error
  */
