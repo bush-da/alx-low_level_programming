@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /*
- * main : main function
- * puts : prints some text
- * return 0
+ * main - main function
+ * puts - prints some text
+ * returns 0 if no error
  */
 
 int main()
