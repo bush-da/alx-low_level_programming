@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /*
- * main - main function
+ * main - entiry point
  * puts - prints some text
  * returns 0 if no error
  */
 
-int main()
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 
