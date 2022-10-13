@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	printf("with proper grammar,"
-		" but the outcome is a"
-	       " piece of art,\n");
+	printf("with proper grammar,");
+	printf(" but the outcome is a");
+	printf(" piece of art,\n");
 	return (0);
 }
