@@ -13,16 +13,14 @@ int main(void)
 
 	while (c <= 57)
 	{
-		if (c == 57)
-		{
-			putchar(c);
-			break;
-		}
 		putchar(c);
+		if (c == 57)
+			break;
 		putchar(',');
 		putchar(' ');
 		c++;
 	}
+	putchar('\n');
 
 	return (0);
 }
