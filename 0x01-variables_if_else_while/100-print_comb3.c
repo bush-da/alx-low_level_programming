@@ -13,9 +13,9 @@ int main(void)
 
 	n1 = n2 = 48;
 
-	while (n1 <= 58)
+	while (n1 <= 57)
 	{
-		while (n2 <= 58)
+		while (n2 <= 57)
 		{
 			putchar(n1);
 			putchar(n2);
@@ -26,7 +26,7 @@ int main(void)
 			n2++;
 		}
 		n1++;
-		n2 = n1+1;
+		n2 = n1 + 1;
 	}
 	putchar('\n');
 
