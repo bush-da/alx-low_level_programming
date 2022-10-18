@@ -11,7 +11,7 @@ void jack_bauer(void)
 
 	i = j = k = l = 0;
 
-	while (i <=2)
+	while (i <= 2)
 	{
 		while (j <= 3)
 		{
@@ -39,4 +39,5 @@ void jack_bauer(void)
 		j = 0;
 		l = 0;
 	}
+	_putchar('\n');
 }
