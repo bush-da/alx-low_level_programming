@@ -1,11 +1,10 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
  * main - prints _putchar
  * Return: 0 if there is no error
  */
 
-int main(void)
+int main()
 {
 	int i;
 	char s[] = "_putchar";
