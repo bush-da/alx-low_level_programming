@@ -2,23 +2,26 @@
 
 /**
  * print_to_98 - print number starting form given number
+ * @i: accept argument for print_to_98 function
+ * print - print two digit numbers
+ * @i: accepts argument for print function
  * to 98
  * @c: accept argument
  * Return: void
  */
 
-void print(long n)
+void print(long i)
 {
-	if (n < 0)
+	if (i < 0)
 	{
 		_putchar('-');
-		n = -n;
+		i = -n;
 	}
-	
-	if (n/10)
-		print(n/10);
 
-	_putchar(n%10 + '0');
+	if (i / 10)
+		print(i / 10);
+
+	_putchar(i % 10 + '0');
 }
 
 void print_to_98(int n)
@@ -28,7 +31,7 @@ void print_to_98(int n)
 		while (n <= 98)
 		{
 			print(n);
-			if ( n != 98)
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -38,7 +41,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		while ( n >= 98)
+		while (n >= 98)
 		{
 			print(n);
 			if (n != 98)
