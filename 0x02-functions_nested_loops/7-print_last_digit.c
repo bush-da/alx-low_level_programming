@@ -18,7 +18,8 @@ int print_last_digit(int c)
 	else
 	{
 		_putchar('0' + x);
-	
+	}
+
 	return (x);
-		
+
 }
