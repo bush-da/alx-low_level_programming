@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print() - print two digit numbers
+ * print - print two digit numbers
  * @i: accepts argument for print function
  * Return: void
  */
