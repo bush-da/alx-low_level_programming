@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print & times_table - prints tow digit number
+ * print - prints tow digit number
  * @n: accepts argument
  * Return: void
  */
@@ -17,6 +17,10 @@ void print(int n)
 
 	_putchar(n % 10 + '0');
 }
+/**
+ * times_table - prints times table
+ * Return: void
+ */
 
 void times_table(void)
 {
