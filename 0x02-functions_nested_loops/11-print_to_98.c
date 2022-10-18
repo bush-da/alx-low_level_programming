@@ -1,12 +1,8 @@
 #include "main.h"
 
 /**
- * print_to_98 - print number starting form given number
  * print() - print two digit numbers
  * @i: accepts argument for print function
- * @n: accepts arguemnt for print_to_98 function
- * to 98
- * @c: accept argument
  * Return: void
  */
 
@@ -23,7 +19,11 @@ void print(int i)
 
 	_putchar(i % 10 + '0');
 }
-
+/**
+ * print_to_98 - prints number till 98
+ * @n: accept argument
+ * Return: void
+ */
 void print_to_98(int n)
 {
 	if (n <= 98)
