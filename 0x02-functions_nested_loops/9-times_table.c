@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
+ * print - prints tow digit number
  * times_table - prints times table
- * print: print two digit numbers
  * @n: accepts argument
  * Return: void
  */
