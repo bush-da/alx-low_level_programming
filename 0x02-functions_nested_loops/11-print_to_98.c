@@ -3,14 +3,14 @@
 /**
  * print_to_98 - print number starting form given number
  * @i: accept argument for print_to_98 function
- * print - print two digit numbers
+ * print() - print two digit numbers
  * @i: accepts argument for print function
  * to 98
  * @c: accept argument
  * Return: void
  */
 
-void print(long i)
+void print(int i)
 {
 	if (i < 0)
 	{
