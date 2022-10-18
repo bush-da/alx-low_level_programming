@@ -10,7 +10,15 @@ int print_last_digit(int c)
 	int x;
 
 	x = c % 10;
-	_putchar(x + '0');
-
+	if (x < 0)
+	{
+		x *= -1;
+		_putchar('0' + x);
+	}
+	else
+	{
+		_putchar('0' + x);
+	
 	return (x);
+		
 }
