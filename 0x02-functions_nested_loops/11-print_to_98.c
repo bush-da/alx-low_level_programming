@@ -15,7 +15,7 @@ void print(long i)
 	if (i < 0)
 	{
 		_putchar('-');
-		i = -n;
+		i = -i;
 	}
 
 	if (i / 10)
