@@ -14,7 +14,7 @@ int main(void)
 	num = 98;
 	count = 2;
 	printf("%d, %d, ", fib1, fib2);
-	while (count <= 98)
+	while (count <= num)
 	{
 		fib3 = fib1 + fib2;
 		count++;
