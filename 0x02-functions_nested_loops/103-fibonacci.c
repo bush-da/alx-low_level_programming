@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int fib1, fib2, fib3, sum, count;
+	int fib1, fib2, fib3, sum;
 
 	fib1 = 1;
 	fib2 = 2;
