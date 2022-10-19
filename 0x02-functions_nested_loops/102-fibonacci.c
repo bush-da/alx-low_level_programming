@@ -5,7 +5,7 @@
  * Return: 0 if there is no error
  */
 int main(void)
-{	
+{
 	int fib1, fib2, fib3, num, count;
 
 	fib1 = 1;
