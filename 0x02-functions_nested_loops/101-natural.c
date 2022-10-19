@@ -1,43 +1,21 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print - number greater than 1 digit
- * @n: accepts number argument
- * Return: void
+ * main - prits multiple of 3 or 5
+ * Return: 0 if there is no error
  */
 
-void print(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-		print(n / 10);
-	_putchar(n % 10 + '0');
-}
-
-/**
- * natural - prints all multiple of 3 or 5
- * Return: void
- */
-
-void natural(void)
+int main(void)
 {
 	int i, sum;
 
-	i = 1023;
+	num = 1024;
 	sum = 0;
 
-	while (i >= 1)
+	for (i = 1; i < num; i++)
 	{
-		if (i % 5 == 0 || i % 3 ==0 )
-		{
+		if (i % 5 == 0 || i % 3 == 0)
 			sum += i;
-		}
-		i--;
 	}
-	print(sum);
+	printf("%d",sum);
 }
-
