@@ -19,7 +19,8 @@ void print(int n)
 	_putchar(n % 10 + '0');
 }
 /**
- * times_table - prints times table
+ * print_times_table - prints times table
+ * @n: accepts argument
  * Return: void
  */
 
@@ -36,8 +37,7 @@ void print_times_table(int n)
 				res = i * j;
 				if (j == 0)
 				{
-					_putchar('0');
-					
+					_putchar('0');	
 				}
 				else if (res < 10)
 				{
