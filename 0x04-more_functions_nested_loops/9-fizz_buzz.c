@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints fizz buzz
+ * main - prints fizz fo multiples of 3
+ * prints buzz for multiples of 5
+ * fizzbuzz for multiples of 3 and 5
  * Return: 0 if there is no error
  */
 
