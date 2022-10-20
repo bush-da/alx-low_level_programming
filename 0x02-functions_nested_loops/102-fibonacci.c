@@ -17,7 +17,8 @@ int main(void)
 	for (count = 2; count < num; count++)
 	{
 		fib3 = fib1 + fib2;
-		printf("%ld, ", fib3);
+		printf(", ");
+		printf("%ld", fib3);
 		fib1 = fib2;
 		fib2 = fib3;
 	}
