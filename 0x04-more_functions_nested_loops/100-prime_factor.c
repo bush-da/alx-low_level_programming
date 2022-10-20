@@ -7,15 +7,15 @@
 
 int main(void)
 {
-	long long int num;
-	long long int count;
+	long unsigned int num;
+	long unsigned int count;
 
 	num = 612852475143;
 	for (count = 2; num > 1; count++)
 	{
 		while (num % count == 0)
 		{
-			printf("%d ", count);
+			printf("%lu ", count);
 			num = num / count;
 		}
 	}
