@@ -12,7 +12,7 @@ int main(void)
 	fib2 = 2;
 
 	num = 50;
-	printf("%ld, %ld, ", fib1, fib2);
+	printf("%ld, %ld", fib1, fib2);
 
 	for (count = 2; count < num; count++)
 	{
