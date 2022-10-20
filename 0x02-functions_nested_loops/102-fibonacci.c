@@ -6,23 +6,20 @@
  */
 int main(void)
 {
-	int fib1, fib2, fib3, num, count;
+	long fib1, fib2, fib3, num, count;
 
 	fib1 = 1;
 	fib2 = 2;
 
-	count = 2;
-
 	num = 50;
 	printf("%d, %d, ", fib1, fib2);
 
-	while (count <= num)
+	for (count = 2; count < 50; count++)
 	{
 		fib3 = fib1 + fib2;
-		printf("%d, ", fib3);
+		printf("%ld, ", fib3);
 		fib1 = fib2;
 		fib2 = fib3;
-		count++;
 	}
 
 
