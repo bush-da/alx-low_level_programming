@@ -23,6 +23,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fib3;
 	}
+	printf("\n");
 
 	return (0);
 }
