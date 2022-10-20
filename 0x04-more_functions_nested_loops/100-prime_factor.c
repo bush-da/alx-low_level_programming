@@ -15,9 +15,13 @@ int main(void)
 	{
 		while (num % count == 0)
 		{
-			printf("%lu ", count);
+			printf("%lu", count);
 			num = num / count;
+			if (num > 1)
+				printf(" ");
 		}
 	}
+	printf("\n");
+
 	return (0);
 }
