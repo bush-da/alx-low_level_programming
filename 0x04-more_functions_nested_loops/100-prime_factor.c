@@ -7,21 +7,20 @@
 
 int main(void)
 {
-	long unsigned int num;
-	long unsigned int count;
+	unsigned long int num, count, max;
 
+	max = 0;
 	num = 612852475143;
 	for (count = 2; num > 1; count++)
 	{
 		while (num % count == 0)
 		{
-			printf("%lu", count);
+			if (max < count)
+				max = count;
 			num = num / count;
-			if (num > 1)
-				printf(" ");
 		}
 	}
-	printf("\n");
+	printf("%d\n", max);
 
 	return (0);
 }
