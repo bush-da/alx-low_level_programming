@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int sign, i;
-	unsigned int res;
+	int res;
 
 	res = 0;
 	sign = 0;
@@ -25,10 +25,7 @@ int _atoi(char *s)
 		}
 
 	}
-	if ( sign >= 1 && sign % 2 != 0)
-		_putchar('-');
-	i = 0;
-	for (; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
@@ -38,5 +35,7 @@ int _atoi(char *s)
 		}
 	}
 
+	if ( (sign >= 1 && sign % 2 != 0))
+		_putchar('-');
 	return (res);
 }
