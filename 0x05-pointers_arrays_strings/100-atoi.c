@@ -10,6 +10,7 @@ int _atoi(char *s)
 {
 	int sign, i;
 	unsigned int res;
+
 	res = 0;
 	sign = 0;
 	i = 0;
@@ -19,13 +20,13 @@ int _atoi(char *s)
 		if (s[i] == '-')
 		{
 			sign++;
-			if ((s[i + 1] >= 48 && s[i + 1] <= 57) && (sign > 0 && sign % 2 != 0))
-			{
-				_putchar('-');
-			}
+			if (s[i + 1] >= 48 && s[i + 1] <= 57)
+				break;
 		}
 
 	}
+	if ( sign >= 1 && sign % 2 != 0)
+		_putchar('-');
 	i = 0;
 	for (; s[i] != '\0'; i++)
 	{
