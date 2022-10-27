@@ -23,13 +23,13 @@ int _strcmp(char *s1, char *s2)
 	}
 	if (len1 != len2)
 	{
-		if (len1 > len2)
+		if (len1 < len2)
 		{
-			return ((s1[len1 - 1] + '0') - (s2[len2] + '0'));
+			return ((s2[len2 - 1]) - (s1[len1] + '0'));
 		}
 		else
 		{
-			return ((s1[len1] + '0') - (s2[len2 - 1] + '0'));
+			return ((s2[len2] + '0') - (s1[len1 - 1]));
 		}
 	}
 	else
