@@ -4,14 +4,15 @@
  * _strcmp - compares two strings
  * @s1: accept string argument
  * @s2: accept string argument
- * Return: 0 if strings are equal
+ * Return: compare value
  */
 
 int _strcmp(char *s1, char *s2)
 {
 	int len1, len2, i;
 
-	len1 = len2 = 0;
+	len1 = 0;
+	len2 = 0;
 	while (s1[len1] != '\0')
 	{
 		len1++;
@@ -22,13 +23,13 @@ int _strcmp(char *s1, char *s2)
 	}
 	if (len1 != len2)
 	{
-		if (len2 > len1)
+		if (len1 > len2)
 		{
-			return (s2[len2 - 1] -  48);
+			return ((s1[len1 - 1] + '0') - (s2[len2] + '0'));
 		}
 		else
 		{
-			return (48 - s1[len1 - 1]);
+			return ((s1[len1] + '0') - (s2[len2 - 1] + '0'));
 		}
 	}
 	else
@@ -41,10 +42,10 @@ int _strcmp(char *s1, char *s2)
 			}
 			else
 			{
-				return ((s2[i] + '0') - (s1[i] + '0'));
+				return ((s1[i] + '0') - (s2[i] + '0'));
 				break;
 			}
 		}
-		return ((s1[i] + '0') - (s2[i] + '0'));
+		return ((s1[i + 1] + '0') - (s2[i + 1] + '0'));
 	}
 }
