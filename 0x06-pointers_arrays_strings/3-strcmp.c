@@ -9,42 +9,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int len1, len2, i;
+	int i, f;
 
-	len1 = 0;
-	len2 = 0;
-	while (s1[len1] != '\0')
+	i = 0;
+	while (s1[i] == s2[i] && (s1[i] != '\0' && s2[i] != '\0'))
 	{
-		len1++;
+		i++;
 	}
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-	if (len1 != len2)
-	{
-		if (len1 < len2)
-		{
-			return ((s2[len2 - 1]) - (s1[len1] + '0'));
-		}
-		else
-		{
-			return ((s2[len2] + '0') - (s1[len1 - 1]));
-		}
-	}
-	else
-	{
-		for (i = len1 - 1; i >= 0; i--)
-		{
-			if (s1[i] == s2[i])
-			{
-				continue;
-			}
-			else
-			{
-				return ((s1[i] + '0') - (s2[i] + '0'));
-			}
-		}
-		return ((s1[i + 1] + '0') - (s2[i + 1] + '0'));
-	}
+	f = s1[i] - s2[i];
+	return (f);
 }
