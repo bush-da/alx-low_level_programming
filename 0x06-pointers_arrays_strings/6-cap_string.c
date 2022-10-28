@@ -1,31 +1,33 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string
- * @s: accept string argument
+ * cap_string - capitalize all first letter
+ * @c: accept string argument
  * Return: c
  */
 
-char *cap_string(char *s)
+char *cap_string(char *c)
 {
-	int i, x;
-	int a[]  = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i = 0;
+	int x= 0;
+	int key[] = {32, 9, 10, 44, 59, 33, 46, 34, 63, 40, 41, 123, 125};
 
-	i = 0;
-	while (s[i] != '\0')
+	while (c[i] != '\0')
 	{
-		for (x = 0; x < 13; x++)
+		while (key[x] != '\0')
 		{
-			if (s[i] == a[x])
+			if (c[i] == key[x])
 			{
-				if (s[i + 1] >= 97 && s[i + 1] <= 122)
-				{
-					s[i + 1] = s[i + 1] - 32;
-				}
+				if (c[i + 1] >= 97 && c[i + 1] <= 122)
+					c[i + 1] = c[i + 1] - 32;
+				if (c[i] == key[1])
+					c[i] = key[0];
 				break;
 			}
+			x++;
 		}
 		i++;
+		x = 0;
 	}
-	return (s);
+	return (c);
 }
