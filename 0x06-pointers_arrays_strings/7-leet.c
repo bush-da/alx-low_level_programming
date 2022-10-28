@@ -9,9 +9,9 @@
 char *leet(char *c)
 {
 	int i, x;
-
 	char *key = "aAeEoOtTlL";
 	int value[] = {4,4,3,3,0,0,7,7,1,1};
+
 	i = 0;
 	while (c[i] != '\0')
 	{
