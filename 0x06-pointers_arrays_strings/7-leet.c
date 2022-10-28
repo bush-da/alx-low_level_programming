@@ -19,7 +19,7 @@ char *leet(char *c)
 		{
 			if (c[i] == key[x])
 			{
-				c[i] = value[x] + '0';
+				c[i] = value[x]+'0';
 				break;
 			}
 		}i++;
