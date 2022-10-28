@@ -19,9 +19,13 @@ char *cap_string(char *c)
 			if (c[i] == key[x])
 			{
 				if (c[i + 1] >= 97 && c[i + 1] <= 122)
+				{
 					c[i + 1] = c[i + 1] - 32;
+				}
 				if (c[i] == key[1])
+				{
 					c[i] = key[0];
+				}
 				break;
 			}
 			x++;
