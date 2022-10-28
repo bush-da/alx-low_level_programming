@@ -10,7 +10,7 @@ char *rot13(char *c)
 {
 	int i, x;
 	char key[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char value[] = "nopqrstuvwxyzabcdefghijkllmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char value[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	i = 0;
 	while (c[i] != '\0')
