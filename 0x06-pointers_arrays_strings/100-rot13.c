@@ -9,19 +9,21 @@
 char *rot13(char *c)
 {
 	int i, x;
+	char key[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char value[] = "nopqrstuvwxyzabcdefghikllmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rot[] = "nopqrstuvwxyzabcdefghikllmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	for (i = 0; c[i] != '\0'; i++)
+	i = 0;
+	while (c[i] != '\0')
 	{
-		for (x = 0; a[x] != '\0'; x++)
+		for (x = 0; key[x] != '\0'; x++)
 		{
-			if (c[i] == a[x])
+			if (c[i] == key[x])
 			{
-				c[i] = rot[x];
+				c[i] = value[x];
 				break;
 			}
 		}
+		i++;
 	}
 	return (c);
 }
