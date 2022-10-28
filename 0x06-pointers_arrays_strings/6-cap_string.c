@@ -8,10 +8,11 @@
 
 char *cap_string(char *c)
 {
-	int i = 0;
-	int x= 0;
+	int i, x;
 
 	int key[] = {32, 9, 10, 44, 59, 33, 46, 34, 63, 40, 41, 123, 125};
+	x = 0;
+	i = 0;
 	if (c[i] >= 97 && c[i] <= 122)
 		c[i] = c[i] - 32;
 	i++;
