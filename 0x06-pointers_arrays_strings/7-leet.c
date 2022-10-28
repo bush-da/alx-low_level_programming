@@ -22,8 +22,8 @@ char *leet(char *c)
 				c[i] = value[x] + '0';
 				break;
 			}
-		}
-		i++;
+		}i++;
 	}
+
 	return (c);
 }
