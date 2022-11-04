@@ -14,23 +14,26 @@ int main(int argc, char **argv)
 
 	tot = 0;
 	i = 1;
-	if (argc == 1)
+	if (argc > 0)
 	{
-		printf("%d\n", tot);
-		return (0);
-	}
-	while (i < argc)
-	{
-		if (*argv[i] >= 48 && *argv[i] <= 58)
+		if (argc == 1)
 		{
-			tot += atoi(argv[i]);
+			printf("%d\n", tot);
+			return (0);
 		}
-		else
+		while (i < argc)
 		{
-			printf("Error\n");
-			return (1);
+			if (*argv[i] >= 48 && *argv[i] <= 58)
+			{
+				tot += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+			i++;
 		}
-		i++;
 	}
 	printf("%d\n", tot);
 	return (0);
