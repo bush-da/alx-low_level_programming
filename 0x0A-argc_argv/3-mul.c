@@ -9,15 +9,16 @@
 
 int main(int argc, char **argv)
 {
-	int x, y;
+	int x, y, total;
 
-	if (argc != 3)
+	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	x = *argv[1] - 48;
 	y = *argv[2] - 48;
-	printf("%d\n", x * y);
+	total = x * y;
+	printf("%d\n", total);
 	return (0);
 }
