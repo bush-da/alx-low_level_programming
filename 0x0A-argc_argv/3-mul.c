@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 		x = atoi(argv[1]);
 		y = atoi(argv[2]);
 		total = x * y;
-		printf("%d", total);
+		printf("%d\n", total);
 	}
 	return (0);
 }
