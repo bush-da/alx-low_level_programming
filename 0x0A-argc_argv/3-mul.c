@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	int x, y;
 
 	if (argc <= 1)
-		printf("error");
+		printf("Error");
 	else
 	{	
 		x = atoi(argv[1]);
