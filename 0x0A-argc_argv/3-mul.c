@@ -11,14 +11,17 @@ int main(int argc, char **argv)
 {
 	int x, y, total;
 
-	if (argc <= 1)
+	if (argc > 0)
 	{
-		printf("Error\n");
-		return (1);
+		if (argc != 3)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		x = *argv[1] - 48;
+		y = *argv[2] - 48;
+		total = x * y;
+		printf("%d\n", total);
 	}
-	x = *argv[1] - 48;
-	y = *argv[2] - 48;
-	total = x * y;
-	printf("%d\n", total);
 	return (0);
 }
