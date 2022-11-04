@@ -10,18 +10,20 @@
 
 int main(int argc, char **argv)
 {
-	int x, y, total;
-	if (argc > 0)
+	int i, tot;
+
+	tot = i = 1;
+	if (argc != 3)
 	{
-		if (argc != 3)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		x = atoi(argv[1]);
-		y = atoi(argv[2]);
-		total = x * y;
-		printf("%d\n", total);
+		printf("Error\n");
+		return (1);
 	}
+	while (i < argc)
+	{
+		tot *= atoi(argv[i]);
+		i++;
+	}
+	printf("%d\n", tot);
+
 	return (0);
 }
