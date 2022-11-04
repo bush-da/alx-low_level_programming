@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	i = 1;
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
+		printf("%d\n", tot);
 		return (0);
 	}
 	while (i < argc)
