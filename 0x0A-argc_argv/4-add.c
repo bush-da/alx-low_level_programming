@@ -11,10 +11,9 @@
 
 int main(int argc, char **argv)
 {
-	int tot, i, x, y, a;
+	int tot, x, y, a;
 
 	tot = 0;
-	i = 1;
 	a = argc;
 	if (argc == 1)
 	{
