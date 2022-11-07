@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	if (str == NULL || a == NULL)
 		return (NULL);
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		a[i] = str[i];
 		i++;
