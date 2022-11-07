@@ -13,10 +13,10 @@ char *_strdup(char *str)
 	char *a;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i - 1] != '\0')
 		i++;
 	a = malloc(i);
-	if (str == NULL || a == NULL)
+	if (str == NULL || i == 0)
 		return (NULL);
 	i = 0;
 	while (str[i] != '\0')
