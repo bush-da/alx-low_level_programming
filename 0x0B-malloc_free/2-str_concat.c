@@ -25,19 +25,10 @@ char *str_concat(char *s1, char *s2)
 	if (a == NULL)
 		return (0);
 	temp = a;
-	i = 0;
 	while (*s1 != '\0')
-	{
-		temp[i] = *s1;
-		s1++;
-		i++;
-	}
+		*temp++ = *s1++;
 	while (*s2 != '\0')
-	{
-		temp[i] = *s2;
-		s2++;
-		i++;
-	}
+		*temp++ = *s2++;
 	temp[i] = '\0';
 
 	return (a);
