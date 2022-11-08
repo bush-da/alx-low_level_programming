@@ -19,10 +19,6 @@ char *str_concat(char *s1, char *s2)
 		len2++;
 	tot = len1 + len2 + 1;
 	a = malloc(tot);
-	if (a == NULL)
-	{
-		return (NULL);
-	}
 	i = 0;
 	while (*s1 != '\0')
 	{
