@@ -12,9 +12,9 @@ int *array_range(int min, int max)
 {
 	int *b, i;
 
+	i = 0;
 	if (min > max)
 		return (NULL);
-	i = 0;
 	b = malloc(sizeof(int) * (max + 1));
 	if (b == NULL)
 		return (NULL);
@@ -22,6 +22,7 @@ int *array_range(int min, int max)
 	{
 		b[i] = min;
 		min++;
+		i++;
 	}
 	return (b);
 }
