@@ -40,14 +40,26 @@ char *copy(char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+	char *_name, *_owner;
 
 	dog = malloc(sizeof(struct dog));
 	if (dog == NULL)
+		return(NULL);
+	_name = copy(name);
+	if (_name == NULL)
+	{
+		free(dog);
 		return (NULL);
-	dog->name = copy(name);
+	}
+	_owner = copy(owner);
+	if (_owner == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	dog->name = _name;
 	dog->age = age;
-	dog->owner = copy(owner);
+	dog->owner = _owner;
 
 	return (dog);
 }
-
