@@ -13,13 +13,17 @@ char *_copy(char *src)
 	char *c;
 
 	if (src == NULL)
+	{
 		return (NULL);
+	}
 	len = 0;
 	while (src[len] != '\0')
 		len++;
 	c = malloc(sizeof(char) * (len + 1));
 	if (c == NULL)
+	{
 		return (NULL);
+	}
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -42,15 +46,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *dog;
 	char *_name, *_owner;
 
-
 	if (name == NULL || owner == NULL)
+	{
 		return (NULL);
-
+	}
 	dog = malloc(sizeof(struct dog));
 
 	if (dog == NULL)
+	{
 		return(NULL);
-
+	}
 	_name = _copy(name);
 	if (_name == NULL)
 	{
@@ -58,6 +63,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dog->name = _name;
+
 	_owner = _copy(owner);
 	if (_owner == NULL)
 	{
@@ -66,6 +72,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dog->age = age;
+
 	dog->owner = _owner;
 
 	return (dog);
