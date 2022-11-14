@@ -2,6 +2,35 @@
 #include <stdlib.h>
 
 /**
+ * copy - copy's string
+ * @src: source of string
+ * Return: pointer to new copied address
+ */
+
+char *copy(char *src)
+{
+	int i, len;
+	char *c;
+
+	if (src == NULL)
+		return (NULL);
+	len = 0;
+	while (src[len] != '\0')
+		len++;
+	c = malloc(sizeof(char) * len + 1);
+	if (c == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		c[i] = src[i];
+		i++;
+	}
+	c[i] = '\0';
+	return (c);
+}
+
+/**
  * new_dog - create a new dog
  * @name: name of a dog
  * @age: age of a dog
