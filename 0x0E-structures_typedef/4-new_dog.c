@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * copy - copy's string
+ * _copy - copy's string
  * @src: source of string
  * Return: pointer to new copied address
  */
@@ -39,6 +39,7 @@ char *_copy(char *src)
  * @name: name of a dog
  * @age: age of a dog
  * @owner: owner of a dog
+ * Return: dog pointer two new copy value
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -54,7 +55,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (dog == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	_name = _copy(name);
 	if (_name == NULL)
