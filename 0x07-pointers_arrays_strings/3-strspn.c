@@ -9,9 +9,10 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, flag;
+	unsigned int i, x, j, flag;
 
 	i = j = 0;
+	x = 1;
 	while (s[i] != '\0')
 	{
 		while (accept[j] != '\0')
@@ -28,8 +29,9 @@ unsigned int _strspn(char *s, char *accept)
 		if (flag != 0)
 			return (flag);
 		j = 0;
+		x++;
 		i++;
 	}
 
-	return (i);
+	return (x - 1);
 }
