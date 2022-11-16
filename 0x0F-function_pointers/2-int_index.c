@@ -5,7 +5,8 @@
  * @array: address of array
  * @size: size of array
  * cmp: compare function that compare value
- * Return: the index of array that matches
+ * Return: -1 if didn't match if return not equal
+ * to 0 match found and return index number
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
