@@ -3,7 +3,7 @@
 /**
  * print_strings - prints strings
  * @separator: separate a string
- * n: number of strings passed to the function
+ * @n: number of strings passed to the function
  * Return: void
  */
 
@@ -24,9 +24,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("(nil)");
 
-		if (i < n)
-			if (separator)
-				printf("%s", separator);
+		if (i < n && separator)
+			printf("%s", separator);
 		i++;
 	}
 	printf("\n");
