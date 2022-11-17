@@ -13,7 +13,8 @@ void print_all(const char * const format, ...)
 	char *str;
 	const char arg[] = "cifs";
 
-	i = c = 0;
+	i = 0;
+	c = 0;
 	va_start(ag, format);
 	while (format && format[i])
 	{
@@ -24,8 +25,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
+			} j++;
 		}
 		switch (format[i])
 		{
