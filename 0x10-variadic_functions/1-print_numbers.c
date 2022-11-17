@@ -22,13 +22,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%d", va_arg(ag, int));
 			if (i != n)
 			{
-				putchar(*separator);
-				putchar(' ');
+				printf("%c ", *separator);
 			}
 			i++;
-			if (i > n)
-				putchar('\n');
 		}
 	}
+	printf("\n");
 }
 
