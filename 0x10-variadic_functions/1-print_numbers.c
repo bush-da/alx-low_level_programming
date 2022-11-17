@@ -26,8 +26,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				putchar(' ');
 			}
 			i++;
+			if (i > n)
+				putchar('\n');
 		}
 	}
-	putchar('\n');
 }
 
