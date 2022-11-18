@@ -1,3 +1,4 @@
+#include "variadic_functions.h"
 /**
  * print_all - prints anything
  * @format: format of passed argument
@@ -26,11 +27,14 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(ag, int)), c = 1, break;
+			printf("%c", va_arg(ag, int)), c = 1;
+		       	break;
 		case 'i':
-			printf("%d", va_arg(ag, int)), c = 1, break;
+			printf("%d", va_arg(ag, int)), c = 1;
+		       	break;
 		case 'f':
-			printf("%f", va_arg(ag, double)), c = 1, break;
+			printf("%f", va_arg(ag, double)), c = 1;
+		       	break;
 		case 's':
 			str = va_arg(ag, char *), c = 1;
 			if (!str)
@@ -38,7 +42,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 			}
-			printf("%s", str), break;
+			printf("%s", str);
+		       	break;
 		} i++;
 	}
 	printf("\n"), va_end(ag);
