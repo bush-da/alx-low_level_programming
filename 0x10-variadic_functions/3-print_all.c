@@ -1,4 +1,30 @@
 #include "variadic_functions.h"
+
+/**
+ * checker - checks for valid inputs and put , after
+ * printing the content
+ * @c: character to be checked
+ * @flag: flag to mark it is the end
+ * Return: void
+ */
+
+void checker(char c, int flag)
+{
+	char check[] = "cifs";
+	int j;
+
+	j = 0;
+	while (check[j])
+	{
+		if (c == check[j] && flag)
+		{
+			printf(", ");
+			break;
+		}
+		j++;
+	}
+}
+
 /**
  * print_all - prints anything
  * @format: format of passed argument
@@ -7,36 +33,27 @@
 void print_all(const char * const format, ...)
 {
 	va_list ag;
-	unsigned int i, j, c;
+	unsigned int i, flag;
 	char *str;
-	const char arg[] = "cifs";
 
-	i = c = 0;
+	i = flag = 0;
 	va_start(ag, format);
 	while (format && format[i])
 	{
-		j = 0;
-		while (arg[j])
-		{
-			if (format[i] == arg[j] && c)
-			{
-				printf(", ");
-				break;
-			} j++;
-		}
+		checker(format[i], flag);
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(ag, int)), c = 1;
+			printf("%c", va_arg(ag, int)), flag = 1;
 		       	break;
 		case 'i':
-			printf("%d", va_arg(ag, int)), c = 1;
+			printf("%d", va_arg(ag, int)), flag = 1;
 		       	break;
 		case 'f':
-			printf("%f", va_arg(ag, double)), c = 1;
+			printf("%f", va_arg(ag, double)), flag = 1;
 		       	break;
 		case 's':
-			str = va_arg(ag, char *), c = 1;
+			str = va_arg(ag, char *), flag = 1;
 			if (!str)
 			{
 				printf("(nil)");
