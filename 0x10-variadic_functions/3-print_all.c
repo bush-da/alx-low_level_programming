@@ -45,18 +45,20 @@ void print_all(const char * const format, ...)
 		{
 		case 'c':
 			printf("%c", va_arg(ag, int)), flag = 1;
-		       	break;
+			break;
 		case 'i':
 			printf("%d", va_arg(ag, int)), flag = 1;
-		       	break;
+			break;
 		case 'f':
 			printf("%f", va_arg(ag, double)), flag = 1;
-		       	break;
+			break;
 		case 's':
 			str = va_arg(ag, char *), flag = 1;
-			if (!str) {
+			if (!str)
+			{
 				printf("(nil)");
-				break; }
+				break;
+			}
 			printf("%s", str);
 			break;
 		} i++;
