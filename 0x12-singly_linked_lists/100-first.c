@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 /**
- * before_main - prints before main function executed
+ * before_main - function executed before main
  * Return: void
  */
 
-void before_main() __attribute__ ((constructor));
-
-void before_main()
+void __attribute__ ((constructor)) before_main()
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
