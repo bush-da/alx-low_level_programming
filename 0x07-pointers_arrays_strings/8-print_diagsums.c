@@ -10,7 +10,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i, j, k, l;
-	long int totl, totk;
+	int totl, totk;
 
 	i = j = k = 0;
 	l = size - 1;
@@ -20,8 +20,8 @@ void print_diagsums(int *a, int size)
 		totl += a[i + l];
 		totk += a[i + k];
 		i += size;
-		l -= (size % 2);
-		k += (size % 2);
+		l--;
+		k++;
 	}
-	printf("%ld, %ld\n", totk, totl);
+	printf("%d, %d\n", totk, totl);
 }
