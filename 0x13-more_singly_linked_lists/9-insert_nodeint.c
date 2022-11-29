@@ -29,7 +29,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		check++;
 	}
 
-	if (check != idx)
+	if (check != idx - 1)
 		return (NULL);
 
 	temp->next = tra->next;
