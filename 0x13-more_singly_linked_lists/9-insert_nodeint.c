@@ -14,12 +14,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *tra;
 	unsigned int i, check;
 
+	tra = *head;
+	if (tra == NULL)
+		return (NULL);
+
 	temp = malloc(sizeof(listint_t));
 	if (temp == NULL)
 		return (NULL);
 
 	temp->n = n;
-	tra = *head;
 	i = 0;
 	check = 1;
 	while ((i < idx - 1) && (tra != NULL))
@@ -29,7 +32,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		check++;
 	}
 
-	if (check != idx - 1)
+	if (check != idx)
 		return (NULL);
 
 	temp->next = tra->next;
