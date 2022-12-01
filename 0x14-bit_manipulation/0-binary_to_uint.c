@@ -35,6 +35,8 @@ unsigned int binary_to_uint(const char *b)
 	int single;
 	const char *flag;
 
+	if (!b)
+		return (0);
 	flag = b;
 	pos = 0;
 	tot = 0;
