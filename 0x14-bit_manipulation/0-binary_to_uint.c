@@ -1,12 +1,30 @@
 #include "main.h"
 
 /**
+ * power - powers in 2 the power of input
+ * @x: input number
+ * Return: the result of power
+ */
+
+unsigned int power(unsigned int x);
+{
+	unsigned int tot;
+
+	if (x == 0)
+		return (1);
+	while (x >= 1)
+	{
+		tot *= 2;
+		x--;
+	}
+	return (tot);
+}
+
+/**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: characters of binary number
  * Return: unsigned int of binary number entered
  */
-
-unsigned int power(unsigned int x);
 
 unsigned int binary_to_uint(const char *b)
 {
@@ -31,27 +49,6 @@ unsigned int binary_to_uint(const char *b)
 		tot += sum;
 		pos++;
 		b--;
-	}
-	return (tot);
-}
-
-/**
- * power - powers in 2 the power of input
- * @x: input number
- * Return: the result of power
- */
-
-unsigned int power(unsigned int x)
-{
-	unsigned int tot;
-
-	tot = 1;
-	if (x == 0)
-		return (1);
-	while (x >= 1)
-	{
-		tot *= 2;
-		x--;
 	}
 	return (tot);
 }
