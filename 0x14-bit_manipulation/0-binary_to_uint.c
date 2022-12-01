@@ -6,10 +6,11 @@
  * Return: the result of power
  */
 
-unsigned int power(unsigned int x);
+unsigned int power(unsigned int x)
 {
 	unsigned int tot;
 
+	tot = 1;
 	if (x == 0)
 		return (1);
 	while (x >= 1)
