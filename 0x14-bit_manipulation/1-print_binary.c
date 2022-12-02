@@ -9,6 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int temp;
+	int No_shift;
 
 	if (n == 0)
 	{
@@ -21,12 +22,18 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	temp = n;
-	while (temp)
+	No_shift = 0;
+	while (temp > 0)
 	{
-		if (temp & n)
+		temp >>= 1;
+		No_shift++;
+	}
+	while (No_shift >= 0)
+	{
+		if ((n >> No_shift) & 1)
 			_putchar('1');
 		else
 			_putchar('0');
-		temp = temp >> 1;
+		No_shift--;
 	}
 }
