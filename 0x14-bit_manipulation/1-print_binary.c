@@ -1,32 +1,28 @@
 #include "main.h"
 
-/**
- * print_binary - prints the binary representation of a number
- * @n: base 10 number
- * Return: void
- */
+
 
 void print_binary(unsigned long int n)
 {
-	int i;
-	int count;
-	unsigned long int current;
+	unsigned int temp;
 
-	count = 0;
-	i = 63;
-	while (i >= 0)
+	if (n == 0)
 	{
-		current = n >> i;
-
-		if (current & 1)
-		{
-			_putchar('1');
-			count++;
-		}
-		else if (count)
-			_putchar('0');
-		i--;
+		putchar('0');
+		return;
 	}
-	if (!count)
-		_putchar('0');
+	if (n == 1)
+	{
+		putchar('1');
+		return;
+	}
+	temp = n;
+	while (temp)
+	{
+		if (temp & n)
+			putchar('1');
+		else
+			putchar('0');
+		temp = temp >> 1;
+	}
 }
