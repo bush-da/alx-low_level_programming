@@ -9,18 +9,18 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int temp;
-	int No_shift;
+	int shifts;
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	for (temp = n, No_shift = 0; (temp >>= 1) > 0; No_shift++)
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
 		;
-	for (; shifts >= 0; No_shift--)
+	for (; shifts >= 0; shifts--)
 	{
-		if ((n >> No_shift) & 1)
+		if ((n >> shifts) & 1)
 			_putchar('1');
 		else
 			_putchar('0');
