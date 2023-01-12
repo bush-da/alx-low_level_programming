@@ -8,16 +8,17 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *temp, *temp1;
+	dlistint_t *temp, *checkPoint;
 
+	if (head == NULL)
+		return;
 	temp = head;
-	temp1 = NULL;
 	while (temp->prev)
 		temp = temp->prev;
-	while (temp->next)
+	while (temp)
 	{
-		temp1 = temp->next;
+		checkPoint = temp->next;
 		free(temp);
-		temp = temp1;
+		temp = checkPoint;
 	}
 }
