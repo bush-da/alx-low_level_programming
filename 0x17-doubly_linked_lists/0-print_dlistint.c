@@ -9,16 +9,18 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t no;
+	const dlistint_t *temp;
 
 	no = 1;
-	while (h && h->prev)
+	temp = h;
+	while (temp && temp->prev)
 	{
-		h = h->prev;
+		temp = temp->prev;
 	}
-	while (h)
+	while (temp)
 	{
-		print("%d\n", h->n);
-		h = h->next;
+		print("%d\n", temp->n);
+		temp = temp->next;
 		no++;
 	}
 
