@@ -10,45 +10,80 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *pointerToHead, *checker, *newNode;
-	int count, i;
-
-	pointerToHead = *h;
-	checker = *h;
+	dlistint_t *newNode, *pointerToHead, *nextNode, *check;
+	unsigned int count, i;
 
 	count = 0;
-	while (checker->prev)
-		checker = checker->prev;
-	while (checker)
+	pointerToHead = *h;
+	check = pointerToHead;
+
+	while (check)
 	{
-		checker = checker->next;
+		check = check->next;
 		count++;
 	}
-	if (count > idx)
+
+	if (count < idx)
 		return (NULL);
 
 	newNode = malloc(sizeof(dlistint_t));
-	if (newNode == NULL)
-		return (NULL);
-	i = 0;
+
+	newNode->n = n;
+
 	if (idx == 0)
 	{
-		newNode->next = *h;
-		newNode->prev = NULL;
+		if (*h == NULL)
+		{
+			*h = newNode;
+			newNode->prev = NULL;
+			newNode->next = NULL;
+			return (*h);
+		}
+		newNode->next = pointerToHead;
+		nextNode = pointerToHead->next;
+		if (pointerToHead->next == NULL)
+		{
+			pointerToHead->prev = newNode;
+			newNode->prev = nextNode;
+		}
+		else
+			nextNode->prev = newNode;
 		*h = newNode;
-		return (newNode);
+		return (*h);
 	}
-	while (i < idx - 2)
+
+	i = 0;
+	while (i < idx - 1)
 	{
 		pointerToHead = pointerToHead->next;
 		i++;
 	}
-	newNode->n = n;
-	newNode->next = pointerToHead->next;
+	if (count == idx)
+	{
+		newNode->next = pointerToHead->next;
+		newNode->prev = pointerToHead;
+		pointerToHead->next = newNode;
+		return (*h);
+	}
+	nextNode = pointerToHead->next;
+	newNode->next = nextNode;
 	newNode->prev = pointerToHead;
 	pointerToHead->next = newNode;
-	checker = newNode->next;
-	checker->prev = newNode;
+	nextNode->prev = newNode;
 
-	return (newNode);
+
+	return (*h);
+	/*if (pointerToHead->next)
+	{
+		newNode->prev = pointerToHead;
+		newNode->next = pointerToHead->next;
+		return (newNode);
+		}*/
+
+	/*newNode->next = pointerToHead->next;
+	nextNode = pointerToHead->next;
+	pointerToHead->next = newNode;
+	nextNode->prev = newNode;
+	newNode->prev = pointerToHead;
+	*/
 }
