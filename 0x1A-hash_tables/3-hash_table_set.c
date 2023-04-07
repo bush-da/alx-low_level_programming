@@ -2,6 +2,7 @@
 
 /**
  * hash_table_set - adds an element to the hash table
+ * @ht: hash table
  * @key: key
  * @value: value
  * Return: 1 if it succeeded, 0 otherwise
@@ -28,20 +29,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-
-
-
-       	item = malloc(sizeof(hash_node_t));
-       	if (item == NULL)
+	item = malloc(sizeof(hash_node_t));
+	if (item == NULL)
 	{
 		free(value_type);
-       		return (0);
+		return (0);
 	}
-       	item->key = strdup(key);
-       	item->value = value_type;
+	item->key = strdup(key);
+	item->value = value_type;
 	item->next = ht->array[index];
-       	ht->array[index] = item;
-       	return (1);
+	ht->array[index] = item;
 
-
+	return (1);
 }
