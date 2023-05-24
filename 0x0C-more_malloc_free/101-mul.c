@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	tot = atoi(argv[1]) + atoi(argv[2]);
+	tot = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", tot);
 	return (0);
 }
