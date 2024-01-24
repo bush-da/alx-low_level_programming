@@ -1,0 +1,16 @@
+# Makefile
+
+# Compiler
+CC = gcc
+
+# Source file
+SRC = main.c school.c
+
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+TARGET = school
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(TARGET)
