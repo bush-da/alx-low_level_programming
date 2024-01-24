@@ -24,7 +24,7 @@ clean:
 
 # deletes the object files
 oclean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJ)
 
 # deletes all Emacs and Vim temporary files, the executable, and the object files
 fclean: clean oclean
