@@ -73,6 +73,8 @@ int exponential_search(int *array, size_t size, int value)
 
 	while (expon <= size)
 	{
+		if (array[expon] == value)
+			return (expon);
 		if (array[expon] > value)
 		{
 			printf("Value found between indexes [%ld] and [%ld]\n",
